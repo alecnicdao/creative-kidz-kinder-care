@@ -1,0 +1,445 @@
+@import "functions";
+@import "variables";
+
+$font-family-sans-serif: 'Alegreya', serif;
+$font-family-sans-serif: 'IBM Plex Sans', sans-serif;
+
+$enable-responsive-font-sizes: true;
+
+/* Color Scheme */
+$theme-colors: (
+    "primary": #ffffff,
+    "secondary": #5353C1,
+    "success": #FFA710,
+    "info": #9FE4AD,
+    "warning": #a7a7a7,
+    "danger": #A5C3CF,
+    "dark": #000000,
+);
+
+$link-color: theme-color("primary");
+$link-hover-color: darken($link-color, 15%);
+
+$text-muted: $gray-700;
+
+$progress-height: 2rem;
+
+@import "bootstrap.scss";
+
+/* Global Style Rules */
+
+body {
+    font-family: $font-family-sans-serif;
+    padding-top: 6rem;
+}
+
+.timeline {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+a.btn {
+    border-radius: 30px;
+    color: black;
+}
+
+a.btn:hover {
+    color: white !important;
+}
+
+h1, h2, h3 {
+    font-family: "Alegreya", cursive;
+    color: $gray-900;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.618rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.618rem;
+    font-weight: 700;
+}
+
+h6 {
+    font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.title-underline {
+    width: 200px;
+    height: 10px;
+    margin: 0 auto;
+}
+
+.height-80 {
+    min-height: 80vh;
+}
+
+/* The star rating colors on the testimonial section on the home page */
+.star-rating {
+    color: #FFA710;
+}
+
+/* Timeline */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Filler Section */
+#filler {
+    background: url(https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80) 
+    center/cover no-repeat fixed;
+}
+
+/* Nutrition Section */
+#nutrition {
+    background: url(https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) 
+    center/cover no-repeat fixed;
+}
+
+#apply {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("/img/apply.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+#infants {
+    background: url(https://images.unsplash.com/photo-1509125602259-dc019b0b874f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 
+    center/cover no-repeat fixed;
+}
+
+#toddler {
+    background: url(https://images.unsplash.com/photo-1509125602259-dc019b0b874f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 
+    center/cover no-repeat fixed;
+}
+
+#twoYear {
+    background: url(https://images.unsplash.com/photo-1509125602259-dc019b0b874f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 
+    center/cover no-repeat fixed;
+}
+
+#preschool {
+    background: url(https://images.unsplash.com/photo-1509125602259-dc019b0b874f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 
+    center/cover no-repeat fixed;
+    
+}
+
+#threeYear {
+    background: url(https://images.unsplash.com/photo-1509125602259-dc019b0b874f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 
+    center/cover no-repeat fixed;
+    
+}
+
+#jrKinder {
+    background: url(https://images.unsplash.com/photo-1509125602259-dc019b0b874f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 
+    center/cover no-repeat fixed;
+    
+}
+
+#schoolAge {
+    background: url(https://images.unsplash.com/photo-1509125602259-dc019b0b874f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) 
+    center/cover no-repeat fixed;
+    
+}
+
+/* Container around content 
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+}
+*/
+
+/* Place the container to the right */
+.right {
+    left: 0%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+}
+
+/* Section Style Rules */
+
+.navbar {
+    font-family: "Alegreya", cursive;
+    font-size: 25px;
+    margin-top: fixed;    
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+header h1 {
+    text-shadow: 2px 2px black;
+    letter-spacing: 2px;
+}
+
+.display-2 {
+    line-height: 1.0 !important;
+}
+
+.masthead {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url(../img/responsive_design.jpg)center/cover;
+    height: 90vh;
+}
+
+.aboutHeader {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url(../img/responsiveDesign_about.jpg)center/cover;
+    height: 90vh;
+}
+
+.curHeader {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url(../img/responsiveDesign_curriculum.jpg)center/cover;
+    height: 90vh;
+}
+
+.teamHeader {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url(../img/responsiveDesign_team.jpg)center/cover;
+    height: 90vh;
+}
+
+.careerHeader {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url(../img/responsiveDesign_career.jpg)center/cover;
+    height: 90vh;
+}
+
+.howItWorks {
+    text-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+/* Button Hover Effects */
+
+.hvr-shutter-out-horizontal {
+    border-radius: 1.5rem; 
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: #5353C1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.hvr-shutter-out-horizontal:before {
+    border-radius: 1.5rem;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FC6981;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-functi: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+    color: white;
+}
+
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before,
+.hvr-shutter-out-horizontal:active:before {
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+}
+
+/* Testimonial Carousel */
+
+.carousel-control-prev {
+    margin-left: -50px;
+}
+
+.carousel-control-next {
+    margin-right: -50px;
+}
+
+/* ------------------------- MOBILE VERSIONS ------------------------------------- */
+
+/* Home Page */
+@media screen and (max-width: 576px) {
+    .masthead {
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url(../img/responsive_design_mobile.jpg)center/cover;
+        height: 90vh;
+    }
+
+    .navbar {
+        margin: 0;
+	    display: flex;
+	    align-items: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        font-size: 40px;
+        font-family: sans-serif;
+        background-color: #5353C1;
+        border: 2px solid white;
+        letter-spacing: 0.1em;
+        width: 6.3em;
+        height: 1.5em;
+        line-height: 1.5em;
+        position: relative;
+        overflow: hidden;
+        margin: 0.5em;
+        cursor: pointer;
+    }
+
+    nav ul li span {
+        color: white;
+        mix-blend-mode: difference;
+    }
+
+    nav ul li::before {
+        content: '';
+        position: absolute;
+        width: 1.15em;
+        height: inherit;
+        background-color: white;
+        border-radius: 50%;
+        top: 0;
+        left: -0.75em;
+        transition: 0.5s ease-out;
+    }
+
+    nav ul li:hover::before {
+        transform: scale(7);
+    }
+
+
+}
+
+/* About Page */
+@media screen and (max-width: 576px) {
+    .aboutHeader {
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url(../img/responsiveDesign_aboutMobile.jpg)center/cover;
+        height: 90vh;
+    }
+}
+
+/* Curriculum Page */
+@media screen and (max-width: 576px) {
+    .curHeader {
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url(../img/responsiveDesign_curriculumMobile.jpg)center/cover;
+        height: 90vh;
+    }
+}
+
+/* Team Page */
+@media screen and (max-width: 576px) {
+    .curHeader {
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url(../img/responsiveDesign_teamMobile.jpg)center/cover;
+        height: 90vh;
+    }
+}
